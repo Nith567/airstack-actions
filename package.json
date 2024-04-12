@@ -1,0 +1,25 @@
+{
+  "name": "gm",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npx @airstack/frog vercel-build",
+    "dev": "npx @airstack/frog dev",
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel"
+  },
+  "dependencies": {
+    "@airstack/frog": "^0.0.8",
+    "@vercel/kv": "^1.0.1",
+    "frog": "latest",
+    "dotenv": "^16.4.5",
+    "graphql": "^16.8.1",
+    "hono": "^4",
+    "valibot": "^0.30.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3",
+    "vercel": "^33.7.0"
+  }
+}
