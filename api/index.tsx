@@ -41,7 +41,7 @@ app.hono.post("/gm", async (c) => {
       return c.json({ message: "Error. Try Again." }, 500);
     }
 
-    let message = `g: ${castHash} !`;
+    let message = `g: ${castHash?.slice(0,15)} !`;
     return c.json({ message });
   } else {
     return c.json({ message: "Unauthorized" }, 401);
