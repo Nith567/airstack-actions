@@ -36,16 +36,17 @@ app.hono.post("/gm", async (c) => {
     const { data, error } = await getFarcasterUserDetails({
       fid: castFid,
     });
+
     if (error) {
       return c.json({ message: "Error. Try Again." }, 500);
     }
 
-    let message = `gm,hash ${castHash} !`;
+    let message = `g: ${castHash} !`;
     return c.json({ message });
   } else {
     return c.json({ message: "Unauthorized" }, 401);
   }
-});
+})
 
 devtools(app, { serveStatic });
 
