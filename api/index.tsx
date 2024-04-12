@@ -16,8 +16,7 @@ const ADD_URL =
 export const app = new Frog({
   apiKey: '18e5882bb4bf142b680a7f532e2fdd1db',
   basePath: "/api",
-  // browserLocation: ADD_URL,
-  // hub: neynar({ apiKey: process.env.NEYNAR_API_KEY as string}),
+  browserLocation: ADD_URL,
 });
 
 // Cast action handler
